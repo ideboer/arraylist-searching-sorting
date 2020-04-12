@@ -49,7 +49,7 @@ public class Searching {
 
     public static void main(String[] args) {
         ArrayList<String> haystack = new ArrayList<String>(Arrays.asList("apple", "banana", "banana", "cherry", "lemon", "lime", 
-                                    "orange", "pear", "strawberry", "watermelon"));
+                                    "mango", "orange", "pear", "strawberry", "watermelon"));
         String needle1 = "blueberry";
         String needle2 = "pear";
         String needle3 = "cherry";
