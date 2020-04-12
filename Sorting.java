@@ -24,27 +24,14 @@ public class Sorting {
 
     public static void insertionSort(ArrayList<Integer> list) {
         int temp;  
-        int elementsOn = 2;
-        boolean inOrder = false;
-
-        while (elementsOn != list.size())
-        {
-            while (!inOrder)
-            {
-                inOrder = true;
-                for (int i = 0; i < elementsOn; i++)
-                {
-                    if (list.get(i) > list.get(i + 1))
-                    {
-                        temp = list.get(i);
-                        list.set(i, i + 1);
-                        list.set(i + 1, temp);
-                        inOrder = false;
-                    }
+        for (int i = 1; i < list.size(); i++) {
+            for(int j = i ; j > 0 ; j--){
+                if(list.get(j) < list.get(j - 1)){
+                    temp = list.get(j);
+                    list.set(j, list.get(j - 1));
+                    list.set(j - 1, temp);
                 }
             }
-            elementsOn++;
-            inOrder = false;           
         }
     }  
     
@@ -71,7 +58,7 @@ public class Sorting {
 
     public static void main(String[] args) {
         //selectionSort tests
-        /*ArrayList<Integer> list1 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        ArrayList<Integer> list1 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
         ArrayList<Integer> list2 = new ArrayList<Integer>(Arrays.asList(10, 9, 8, 7, 6, 5, 4, 3, 2, 1));
         ArrayList<Integer> list3 = new ArrayList<Integer>(Arrays.asList(3, 10, 7, 9, 1, 4, 5, 8, 6, 2));
 
@@ -81,10 +68,10 @@ public class Sorting {
         
         System.out.println(list1);
         System.out.println(list2);
-        System.out.println(list3);*/
+        System.out.println(list3);
 
         //insertionSort tests
-        /*ArrayList<Integer> list4 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        ArrayList<Integer> list4 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
         ArrayList<Integer> list5 = new ArrayList<Integer>(Arrays.asList(10, 9, 8, 7, 6, 5, 4, 3, 2, 1));
         ArrayList<Integer> list6 = new ArrayList<Integer>(Arrays.asList(3, 10, 7, 9, 1, 4, 5, 8, 6, 2));
 
@@ -94,7 +81,7 @@ public class Sorting {
         
         System.out.println(list4);
         System.out.println(list5);
-        System.out.println(list6);*/
+        System.out.println(list6);
 
         //bubbleSort tests
         ArrayList<Integer> list7 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
